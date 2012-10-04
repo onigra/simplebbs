@@ -7,6 +7,7 @@ c = CGI.new
 message = c["t"]
 
 f = open("./bbs.dat", "a:UTF-8")
+f.flock(File::LOCK_EX)
 f.write(message + "\n")
 f.close
 

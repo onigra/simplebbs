@@ -7,6 +7,7 @@ filename = "bbs.rb"
 num_list = [10, 20, 50, 100]
 
 f = open("bbs.dat", "r:UTF-8")
+f.flock(File::LOCK_SH)
 datnum = []
 l = f.gets
 
